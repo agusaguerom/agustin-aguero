@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <title>Agustín Agüero | Analista de Sistemas</title>
+</head>
+
+<body>
+    <!-- SideNavBar (Hidden on Mobile) -->
+    <aside class="side-nav">
+        <div class="side-nav__header">
+            <h2 class="side-nav__title">Agüero</h2>
+        </div>
+        <nav class="side-nav__links">
+            <a class="side-nav__link side-nav__link--active" href="#inicio" data-nav-link>
+                <span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+                <span>Inicio</span>
+            </a>
+            <a class="side-nav__link" href="#work" data-nav-link>
+                <span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+                <span>Proyectos</span>
+            </a>
+            <a class="side-nav__link" href="#history" data-nav-link>
+                <span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+                <span>Trayectoria</span>
+            </a>
+            <a class="side-nav__link" href="#studio" data-nav-link>
+                <span class="material-symbols-outlined" data-icon="person">person</span>
+                <span>Perfil</span>
+            </a>
+        </nav>
+        <div class="side-nav__footer">
+            <a class="button button--outline button--full"
+                href="https://drive.google.com/file/d/1B3Kyt9aJmxpA_Mae2JgVJiePTGlno7Pp/view?usp=sharing"
+                target="_blank" rel="noopener noreferrer">
+                Download CV
+            </a>
+        </div>
+    </aside>
+
+    <main class="page">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio" data-section data-reveal>
+            <div class="break-grid-text break-grid-text--hero">AGUSTIN</div>
+            <div class="hero__content">
+                <p class="eyebrow">ANALISTA DE SISTEMAS &amp; DEV FULLSTACK</p>
+                <h1 class="hero__title">Agustín Maximiliano Agüero</h1>
+                <div class="hero__intro">
+                    <p>
+                        Analista de sistemas enfocado en el ciclo de vida completo de productos digitales, desde el
+                        relevamiento funcional
+                        hasta el despliegue técnico. Combino una sólida base académica con experiencia práctica
+                        en el desarrollo de soluciones escalables, priorizando la claridad en la documentación y la
+                        eficiencia en el código.
+                    </p>
+                    <div class="hero__arrow">
+                        <span class="material-symbols-outlined icon--large"
+                            data-icon="arrow_downward">arrow_downward</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Núcleo Híbrido (Editorial Module) -->
+        <section class="section section--muted" id="studio" data-section data-reveal>
+            <div class="container editorial-grid">
+                <div>
+                    <h2 class="section-title section-title--sticky">Acerca<br />de Mi</h2>
+                </div>
+                <div class="editorial-content">
+                    <p class="lead">
+                        Mi rol combina el análisis funcional con la implementación técnica. No solo desarrollo
+                        software, sino que diseño la arquitectura lógica que sostiene cada solución para garantizar su
+                        escalabilidad y mantenimiento a largo plazo.
+                    </p>
+                    <div class="cards-grid">
+                        <div class="info-card">
+                            <h3>01. Análisis</h3>
+                            <p>Relevamiento de requerimientos con clientes y documentación técnica mediante SRS,
+                                diagramas UML y wireframes.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>02. Ejecución</h3>
+                            <p>Desarrollo integral Fullstack y Mobile, integrando modelos de IA y arquitecturas REST
+                                robustas bajo metodologías ágiles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activos Clasificados (Projects Grid) -->
+        <section class="section" id="work" data-section data-reveal>
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title">Proyectos</h2>
+                    <p class="eyebrow section-heading__label">[ DESARROLLOS DESTACADOS ]</p>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: Lectana -->
+                    <a class="project project--large" data-project="Lectana" href="proyectos/lectana.html">
+                        <div class="project__media project__media--wide">
+                            <img alt="Plataforma Lectana" src="assets/lectana.png" />
+                        </div>
+                        <div class="project__meta">
+                            <div>
+                                <h3>Lectana</h3>
+                                <p>SaaS B2B de alfabetización digital. Incluye validación de idea, diseño de
+                                    arquitectura, desarrollo Fullstack/Mobile e integración de IA (Text-to-Speech) para
+                                    accesibilidad.</p>
+                            </div>
+                            <span class="project__actions">
+                                <span class="tag">2025</span>
+                                <span class="project__link">Ver proyecto</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Project 2: Cineket -->
+                    <a class="project project--small" data-project="Cineket" href="proyectos/cineket.html">
+                        <div class="project__media project__media--portrait">
+                            <img alt="Cineket movie platform"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_UqJPUtNx8XlkP1RCwQ3NoipnhQJOZYwjfQiMWztUbisq_cpwUnRpw8VuWHnxB4jyZGkse2p3ch4E3-ydDcZOAxIzlQCzJmeZH54OwUGM_zExSFJ9h5EbPYd1zXGQnk1RHhrpwTQtPnlezAcm1SvtUyVM1jd9Y12f1MTB-YQe-P3U8sEJlJqCxkd8Q9J3KXSpjiqq56alphq053lL3QRtD9E3PyOMJ3tSwnBAKsG1fs3nc5PjSZtNIp3B_DUjnDqP1bmYqeSWVKrw" />
+                        </div>
+                        <div class="project__meta">
+                            <div>
+                                <h3>Cineket</h3>
+                                <p>Sistema de gestión y reserva de entradas. Arquitectura escalable desarrollada con
+                                    Java y Spring Boot.</p>
+                            </div>
+                            <span class="project__actions">
+                                <span class="tag">2024</span>
+                                <span class="project__link">Ver proyecto</span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Project 3: Sistema Inmobiliario -->
+                    <a class="project project--full" data-project="Prop Data" href="proyectos/prop-data.html">
+                        <div class="project-feature">
+                            <div class="project-feature__copy">
+                                <span class="eyebrow muted-label">GESTIÓN PROFESIONAL</span>
+                                <h3>Sistema de Gestión Clínica Odontológica</h3>
+                                <p>
+                                    Solución digital escalable y centralizada para la administración de
+                                    turnos, pacientes, odontólogos, afiliaciones, planes, pagos y tratamientos en
+                                    clínicas odontológicas con múltiples sedes.
+
+                                </p>
+                                <span class="button button--outline">Ver Estudio de Caso</span>
+                            </div>
+                            <div class="project__media project__media--video">
+                                <img alt="Clinica Web" src="assets/clinica.png" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Tech -->
+        <section class="section stack-section" id="stack" data-section data-reveal>
+            <div class="break-grid-text break-grid-text--tech">TECH</div>
+            <div class="container">
+                <h2 class="section-title stack-section__title">Stack Tech</h2>
+                <div class="stack-grid">
+                    <div class="stack-item">
+                        <p class="eyebrow stack-item__label">BACKEND</p>
+                        <p class="stack-item__title">Java / Node.js</p>
+                        <p class="stack-item__text">Spring Boot, Express, Python, PHP.</p>
+                    </div>
+                    <div class="stack-item">
+                        <p class="eyebrow stack-item__label">FRONTEND</p>
+                        <p class="stack-item__title">React / JS</p>
+                        <p class="stack-item__text">Diseño de interfaces, React Router, CSS avanzado.</p>
+                    </div>
+                    <div class="stack-item">
+                        <p class="eyebrow stack-item__label">DATABASE</p>
+                        <p class="stack-item__title">SQL / NoSQL</p>
+                        <p class="stack-item__text">PostgreSQL, MySQL, SQLite, Supabase.</p>
+                    </div>
+                    <div class="stack-item">
+                        <p class="eyebrow stack-item__label">ANÁLISIS & OPS</p>
+                        <p class="stack-item__title">SRS / Docker</p>
+                        <p class="stack-item__text">UML, Wireframing, Git, Postman, Jira.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historial Trayectoria -->
+        <section class="section" id="history" data-section data-reveal>
+            <div class="container history-grid">
+                <div class="history-aside">
+                    <h2 class="section-title">Formación &<br />Trayectoria</h2>
+                    <div class="history-aside__icon">
+                        <span class="material-symbols-outlined icon--huge" data-icon="work_history">work_history</span>
+                    </div>
+                </div>
+                <div class="experience-list">
+                    <!-- Experience Item -->
+                    <article class="experience-item">
+                        <div class="experience-item__copy">
+                            <h3>Analista Programador Freelance</h3>
+                            <p>
+                                Desempeño de rol híbrido en proyectos de software, cubriendo desde el análisis funcional
+                                hasta el mantenimiento fullstack.
+                            </p>
+                        </div>
+                        <div class="experience-item__meta">
+                            <p class="eyebrow">2025</p>
+                            <p>Independiente</p>
+                        </div>
+                    </article>
+
+                    <!-- Experience Item -->
+                    <article class="experience-item">
+                        <div class="experience-item__copy">
+                            <h3>Analista de Sistemas (Educación)</h3>
+                            <p>Formación técnica superior con promedio destacado de 9.22/10. Especialización en modelado
+                                y arquitectura.</p>
+                        </div>
+                        <div class="experience-item__meta">
+                            <p class="eyebrow">2023 - 2025</p>
+                            <p>Escuela Da Vinci</p>
+                        </div>
+                    </article>
+
+                    <!-- Experience Item -->
+                    <article class="experience-item">
+                        <div class="experience-item__copy">
+                            <h3>Certificación - API Design in Node.js, v5</h3>
+                            <p>Especialización en Diseño de APIs en Node.js.Desarrollo, Validación técnica y
+                                arquitectura de
+                                servicios.</p>
+                        </div>
+                        <div class="experience-item__meta">
+                            <p class="eyebrow">2026</p>
+                            <p>Frontend Masters</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact" data-section data-reveal>
+            <div class="footer__inner">
+                <div class="footer__brand">AGUSTIN AGÜERO</div>
+                <div class="footer__links">
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:agusaguerom28@gmail.com">Email</a>
+                    <a href="#">Portafolio</a>
+                </div>
+                <p class="footer__copy">© 2026 Agustín Agüero. Analista de Sistemas.</p>
+            </div>
+        </footer>
+    </main>
+    <script defer src="js/navigation.js"></script>
+    <script defer src="js/reveal.js"></script>
+    <script defer src="js/projects.js"></script>
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>
