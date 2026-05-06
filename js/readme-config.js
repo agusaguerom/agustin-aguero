@@ -6,7 +6,7 @@
             description: "Plataforma educativa enfocada en accesibilidad, recursos interactivos y validacion de producto.",
             role: "Analisis, producto y desarrollo",
             status: "Documentacion activa",
-            stack: ["Producto", "Educacion", "UX", "Fullstack"],
+            stack: ["Producto", "EdTech", "UX", "Node.js", "React", "Java", "JWT"],
             repoUrl: "https://github.com/agusaguerom/lectana-docs",
             readmeUrl: "https://raw.githubusercontent.com/agusaguerom/lectana-docs/refs/heads/main/README.md",
         },

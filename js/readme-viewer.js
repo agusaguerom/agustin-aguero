@@ -81,7 +81,6 @@
                     <div class="readme-viewer__intro">
                         <p class="eyebrow">README adaptado</p>
                         <h2>Documentacion del proyecto</h2>
-                        <p>Contenido tomado del README original y presentado como una pieza editorial dentro del portfolio.</p>
                     </div>
                     ${readmeHtml}
                 </div>
