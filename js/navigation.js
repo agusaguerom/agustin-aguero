@@ -1,77 +1,46 @@
 (function () {
-    const ACTIVE_SIDE_CLASS = "side-nav__link--active";
+    /**
+     * Navigation Logic: ScrollSpy con IntersectionObserver
+     * Detecta qué sección está activa y actualiza el sidebar.
+     */
+    const navLinks = document.querySelectorAll("[data-nav-link]");
+    const sections = document.querySelectorAll("[data-section]");
+    const ACTIVE_CLASS = "side-nav__link--active";
 
-    const getHeaderOffset = () => {
-        return 16;
+    if (!navLinks.length || !sections.length) return;
+
+    // Configuramos el observador para que detecte la sección cuando cruza 
+    // una franja horizontal cerca de la parte superior del viewport (25%).
+    const observerOptions = {
+        root: null,
+        rootMargin: "-25% 0px -70% 0px",
+        threshold: 0,
     };
 
-    const setActiveLink = (hash) => {
-        document.querySelectorAll("[data-nav-link]").forEach((link) => {
-            const isActive = link.getAttribute("href") === hash;
+    const observerCallback = (entries) => {
+        entries.forEach((entry) => {
+            // Solo actuamos cuando la sección entra en el área de escaneo
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                const targetLink = document.querySelector(`[data-nav-link][href="#${id}"]`);
 
-            link.classList.toggle(ACTIVE_SIDE_CLASS, isActive && link.classList.contains("side-nav__link"));
-        });
-    };
-
-    const scrollToSection = (hash) => {
-        const target = document.querySelector(hash);
-
-        if (!target) {
-            return;
-        }
-
-        const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
-
-        window.scrollTo({
-            top,
-            behavior: "smooth",
-        });
-    };
-
-    const observeActiveSection = () => {
-        const sections = document.querySelectorAll("[data-section]");
-
-        if (!sections.length) {
-            return;
-        }
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                const visibleEntry = entries
-                    .filter((entry) => entry.isIntersecting)
-                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-                if (visibleEntry) {
-                    setActiveLink(`#${visibleEntry.target.id}`);
+                // Si la sección tiene un enlace directo en el menú lateral
+                if (targetLink) {
+                    // Quitamos la clase activa de todos los enlaces
+                    navLinks.forEach((link) => link.classList.remove(ACTIVE_CLASS));
+                    // La añadimos al enlace de la sección actual
+                    targetLink.classList.add(ACTIVE_CLASS);
                 }
-            },
-            {
-                rootMargin: "-25% 0px -55% 0px",
-                threshold: [0.15, 0.35, 0.6],
             }
-        );
-
-        sections.forEach((section) => observer.observe(section));
-    };
-
-    const init = () => {
-        document.querySelectorAll("[data-nav-link]").forEach((link) => {
-            link.addEventListener("click", (event) => {
-                const hash = link.getAttribute("href");
-
-                if (!hash || !hash.startsWith("#")) {
-                    return;
-                }
-
-                event.preventDefault();
-                scrollToSection(hash);
-                setActiveLink(hash);
-                history.replaceState(null, "", hash);
-            });
         });
-
-        observeActiveSection();
     };
 
-    window.PortfolioNavigation = { init };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Iniciamos la observación en todas las secciones con data-section
+    sections.forEach((section) => {
+        if (section.id) {
+            observer.observe(section);
+        }
+    });
 })();

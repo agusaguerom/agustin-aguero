@@ -134,6 +134,8 @@ img {
     border-radius: 0;
 }
 
+
+
 /* ==========================================================================
    3. Utilidades compartidas
    Clases reutilizables: contenedores, botones, titulos, iconos y textos breves.
@@ -292,6 +294,31 @@ img {
 
 .side-nav__footer {
     margin-top: auto;
+}
+
+.social-icon-link {
+    color: var(--on-surface-variant);
+    opacity: 0.7;
+    transition: transform 200ms ease, color 200ms ease, opacity 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon-link:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.hero__socials .project__link {
+    font-size: 14px;
+    /* Un poco más grande para el Hero */
+    opacity: 0.8;
+}
+
+.hero__socials .project__link:hover {
+    opacity: 1;
 }
 
 /* ==========================================================================
@@ -812,7 +839,7 @@ img {
         grid-template-columns: repeat(12, 1fr);
     }
 
-    .editorial-grid > div:first-child {
+    .editorial-grid>div:first-child {
         grid-column: span 5;
     }
 
@@ -964,6 +991,7 @@ body.is-leaving .side-nav {
 }
 
 @keyframes quiet-drift {
+
     0%,
     100% {
         transform: translate3d(0, 0, 0);
@@ -1308,6 +1336,12 @@ body.is-leaving .side-nav {
 
 .readme-empty h2 {
     margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .hero__socials {
+        margin-top: 40px;
+    }
 }
 
 @media (max-width: 900px) {
